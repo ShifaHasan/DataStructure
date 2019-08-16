@@ -29,9 +29,9 @@ public class BTTraversalRecursionQuestion {
         //int levlOfNodes = btTraversalQuestion.findLevelOfGivenNodeUsingRecursion(bt, 0, 7);
         //System.out.println(levlOfNodes);
 
+        int x = btTraversalQuestion.searchNode (bt,4);
+        System.out.println(x);
     }
-
-
 
     private int findLevelOfGivenNodeUsingRecursion (BT bt, int level, int data) {
 
@@ -53,7 +53,7 @@ public class BTTraversalRecursionQuestion {
         }
         return -1;
     }
-
+    //Find maximum among all right nodes in Binary Tree
     private int maxValueNodesInBTUsingProOrder (BT bt, int max) {
 
         if (bt.getLeft() == null && bt.getRight() == null) {
@@ -72,7 +72,7 @@ public class BTTraversalRecursionQuestion {
         }
         return max;
     }
-
+    //Find maximum among all right nodes in Binary Tree
     private int maxAmongAllRightNodes (BT bt, int maxRight) {
         if (bt.getLeft() == null && bt.getRight() == null) {
             return maxRight;
@@ -114,7 +114,21 @@ public class BTTraversalRecursionQuestion {
         return x;
 
     }
-    //Find maximum among all right nodes in Binary Tree
+
+    private int searchNode (BT bt, int data) {
+        if (bt == null)
+            return -1;
+        if (bt.getNumData() == data)
+            return bt.getNumData();
+        else {
+            int x = searchNode(bt.getLeft(), data);
+            if(x!=data ){
+            searchNode(bt.getRight(), data);
+            }else
+                return x;
+        }
+        return -1;
+    }
 }
 
   /*                    A1
