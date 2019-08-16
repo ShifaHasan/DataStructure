@@ -1,7 +1,7 @@
 public class Assingment2PracticeQuestion1 {
 
     public static void main (String[] args) {
-        System.out.println("Akherat");
+        System.out.println("Hello Akherat");
         Assingment2PracticeQuestion1 assingment2Practice = new Assingment2PracticeQuestion1();
 
         int arr[] = {10,3,5,6,2};
