@@ -2,15 +2,42 @@ package BinaryTrees;
 
 import java.util.*;
 
-public class BTHorizontalDistanceOrVerticalOrder {
+public class BTHorizontalDistanceOrVerticalOrderOrVerticalSum {
     public static void main (String[] args) {
         System.out.println("Hello Akhrat");
         BTUtilBuilder btUtil = new BTUtilBuilder();
         BT bt = btUtil.createFullBT();
-        BTHorizontalDistanceOrVerticalOrder btHorizentalDistance = new BTHorizontalDistanceOrVerticalOrder();
+        BTHorizontalDistanceOrVerticalOrderOrVerticalSum btHorizentalDistance = new BTHorizontalDistanceOrVerticalOrderOrVerticalSum();
         Map<Integer, List<BT>> horizontalDistMap = new HashMap<Integer, List<BT>>();
         horizontalDistMap = btHorizentalDistance.horizontalDistance(bt, 0, horizontalDistMap);
         System.out.println(horizontalDistMap);
+        btHorizentalDistance.verticalOrderTraversal(horizontalDistMap);
+        btHorizentalDistance.verticalSum(horizontalDistMap);
+    }
+
+    private void verticalSum (Map<Integer, List<BT>> horizontalDistMap) {
+        TreeMap<Integer, List<BT>> sorted = new TreeMap<Integer, List<BT>>(horizontalDistMap);
+        Set<Map.Entry<Integer, List<BT>>> mappings =  sorted.entrySet();
+        for(Map.Entry<Integer, List<BT>>  mapping : mappings){
+            List<BT> listBt = mapping.getValue();
+            int vSum=0;
+            for (BT btObj: listBt) {
+                vSum = vSum + btObj.getNumData();
+            }
+            System.out.println(vSum);
+        }
+    }
+
+    private void verticalOrderTraversal (Map<Integer, List<BT>> horizontalDistMap) {
+        TreeMap<Integer, List<BT>> sorted = new TreeMap<Integer, List<BT>>(horizontalDistMap);
+        Set<Map.Entry<Integer, List<BT>>> mappings =  sorted.entrySet();
+        for(Map.Entry<Integer, List<BT>>  mapping : mappings){
+            List<BT> listBt = mapping.getValue();
+            for (BT btObj: listBt) {
+                System.out.print(btObj.getData());
+            }
+            System.out.println();
+        }
     }
 
     private Map<Integer, List<BT>> horizontalDistance (BT bt, int horizontalLenght, Map<Integer, List<BT>> horizontalDistMap) {

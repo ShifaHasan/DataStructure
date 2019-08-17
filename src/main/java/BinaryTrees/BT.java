@@ -1,12 +1,15 @@
 package BinaryTrees;
 
+import java.util.List;
+import java.util.Map;
+
 public class BT {
 
     String data;
     Integer numData;
     BT left;
     BT right;
-
+    int level;
     public String getData () {
         return data;
     }
@@ -37,5 +40,22 @@ public class BT {
 
     public void setNumData (Integer numData) {
         this.numData = numData;
+    }
+
+
+    public int getLevel () {
+        return level;
+    }
+
+    public void setLevel (int level) {
+        this.level = level;
+    }
+
+    @Override
+    public String toString () {
+        return "BT{" +
+                "data='" + data + '\'' +
+                ", numData=" + numData +
+                '}';
     }
 }

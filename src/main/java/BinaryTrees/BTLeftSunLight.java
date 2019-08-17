@@ -26,11 +26,11 @@ public class BTLeftSunLight {
 
     }
 
-     /*                    A1
+ /*                    A1
 
-                B2              C3
+            B2              C3
 
-           D4        E5      F6      G7
-                                        I9
+       D4        E5      F6      G7
+                                    I9
 */
 }
