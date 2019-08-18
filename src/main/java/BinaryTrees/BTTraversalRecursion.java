@@ -28,7 +28,7 @@ public class BTTraversalRecursion {
 
     }
 
-    private void preOrderTraversal (BT bt) {
+    public void preOrderTraversal (BT bt) {
 
         if (bt == null)
             return;
@@ -39,17 +39,17 @@ public class BTTraversalRecursion {
 
     }
 
-    private void inOrderTraversal (BT bt) {
+    public void inOrderTraversal (BT bt) {
 
         if (bt == null)
             return;
         inOrderTraversal(bt.getLeft());
-        System.out.print(bt.getData());
+        System.out.print(" ");
         System.out.print(bt.getNumData());
         inOrderTraversal(bt.getRight());
     }
 
-    private void postOrderTraversal (BT bt) {
+    public void postOrderTraversal (BT bt) {
 
         if (bt == null)
             return;
@@ -58,7 +58,7 @@ public class BTTraversalRecursion {
         System.out.print(bt.getData());
     }
 
-    private int countNumberOfNodes (BT bt) {
+    public int countNumberOfNodes (BT bt) {
 
         if(bt.getLeft() ==null && bt.getRight() ==null )
             return 1;
@@ -73,7 +73,7 @@ public class BTTraversalRecursion {
 
 
 
-    private int countNumberOfNodesUsingPreOrder (BT bt, int nodeCount) {
+    public int countNumberOfNodesUsingPreOrder (BT bt, int nodeCount) {
 
         if (bt.getLeft() == null && bt.getRight() == null) {
             return nodeCount;

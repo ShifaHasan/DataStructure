@@ -1,12 +1,12 @@
 package BinaryTrees;
 
-public class BTLeastCommonAncesterHarder {
+public class BTLCA {
 
     public static void main (String[] args) {
         System.out.println("Hello Akhrat");
         BTUtilBuilder btUtil = new BTUtilBuilder();
         BT bt = btUtil.createFullBT();
-        BTLeastCommonAncesterHarder btLeastCommonAncester = new BTLeastCommonAncesterHarder();
+        BTLCA btLeastCommonAncester = new BTLCA();
         int immediateParent = btLeastCommonAncester.leastCommonAncestor(bt, 2, 3, -1, -1);
         System.out.println(immediateParent);
     }

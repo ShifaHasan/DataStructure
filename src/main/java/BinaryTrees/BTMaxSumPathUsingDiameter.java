@@ -1,6 +1,6 @@
 package BinaryTrees;
 
-public class BTMaxSumPath {
+public class BTMaxSumPathUsingDiameter {
 
     public static void main (String[] args) {
 

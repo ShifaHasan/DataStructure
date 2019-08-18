@@ -28,16 +28,21 @@ public class BTHorizontalDistanceOrVerticalOrderOrVerticalSum {
         }
     }
 
-    private void verticalOrderTraversal (Map<Integer, List<BT>> horizontalDistMap) {
+    private List<List<Integer>> verticalOrderTraversal (Map<Integer, List<BT>> horizontalDistMap) {
+        List<List<Integer>> listString = new ArrayList<List<Integer>>();
         TreeMap<Integer, List<BT>> sorted = new TreeMap<Integer, List<BT>>(horizontalDistMap);
-        Set<Map.Entry<Integer, List<BT>>> mappings =  sorted.entrySet();
-        for(Map.Entry<Integer, List<BT>>  mapping : mappings){
+        Set<Map.Entry<Integer, List<BT>>> mappings = sorted.entrySet();
+        for (Map.Entry<Integer, List<BT>> mapping : mappings) {
             List<BT> listBt = mapping.getValue();
-            for (BT btObj: listBt) {
+            List<Integer> lists = new ArrayList<Integer>();
+            for (BT btObj : listBt) {
                 System.out.print(btObj.getData());
+                lists.add(btObj.getNumData());
             }
+            listString.add(lists);
             System.out.println();
         }
+        return listString;
     }
 
     private Map<Integer, List<BT>> horizontalDistance (BT bt, int horizontalLenght, Map<Integer, List<BT>> horizontalDistMap) {
