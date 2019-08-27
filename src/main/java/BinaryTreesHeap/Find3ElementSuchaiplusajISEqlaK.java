@@ -4,7 +4,7 @@ package BinaryTreesHeap;
 //i/p:3,5,1,2,9,4
 //o/p a[1]+a[5] = a[4]
 //     5  + 4   = 9
-public class Find3ElementSuchaipulsajISaK {
+public class Find3ElementSuchaipulsajISEqlaK {
 
 
 }
